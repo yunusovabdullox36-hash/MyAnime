@@ -1,0 +1,546 @@
+{
+  "animes": [
+    {
+      "homeSwiper": [
+        {
+          "id": 1,
+          "title": "Titanlarga Qarshi Hujum",
+          "img": "https://link-to-image.com/aot.jpg",
+          "bgImg": "https://link-to-bg.com/aot-bg.jpg",
+          "swiperImgs": [
+            "https://link-to-swiper1.com/aot1.jpg"
+          ]
+        }
+      ],
+      "animeList": [
+        {
+          "id": 1,
+          "title": "Titanlar hujumi",
+          "catalog": [
+            "Jangari",
+            "Drama",
+            "Fantastika"
+          ],
+          "description": "Insoniyat ulkan Titanlar tahdidi ostida devorlar ortida yashaydi. Eren Yeager onasining o‘limidan so‘ng Titanlarga qarshi kurashishga qasam ichadi. U harbiy qo‘shin safiga qo‘shilib, insoniyatning erkinligi uchun jang qiladi. Ammo vaqt o‘tishi bilan Titanlar siri, insoniyatning haqiqiy tarixi va erkinlikning asl narxi haqida dahshatli haqiqatlar ochila boshlaydi.",
+          "xulosa": "Kurash va mashaqqat orqali bardoshlilik, jasorat va do‘stlik qadrini o‘rganish mumkin.",
+          "img": "https://nefariousreviews.wordpress.com/wp-content/uploads/2020/01/attack-on-titan-s3-featured.jpg?w=672&h=372&crop=1",
+          "bgImg": "https://storage.googleapis.com/pod_public/1300/227692.jpg",
+          "swiperImgs": [
+            "https://link-to-swiper1.com/aot1.jpg"
+          ],
+          "releaseYear": 2016,
+          "episodes": 25,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 2,
+          "title": "Iblislar qotili",
+          "catalog": [
+            "Jangari",
+            "Fantastika",
+            "Sarguzasht"
+          ],
+          "description": "Tanjiro Kamado tinch hayot kechirayotgan paytda uning oilasi iblislar tomonidan qirib tashlanadi. Faqat singlisi Nezuko tirik qoladi, ammo u ham iblisga aylanadi. Tanjiro uni yana inson holatiga qaytarish uchun iblis ovchilari safiga qo‘shiladi. U kuchli dushmanlar, xavfli sinovlar va o‘zining ichki qo‘rquvlari bilan yuzma-yuz keladi.",
+          "xulosa": "Oila qadri, sabr-toqat va qat’iyat insonni eng og‘ir sinovlardan ham olib o‘tadi.",
+          "img": "https://culturekit-assets.imgix.net/11/assets/17c33cf1-ee90-4d97-bca2-108acd272796.png?auto=format&fit=max&w=3840&q=100",
+          "bgImg": "https://upload.wikimedia.org/wikipedia/ru/4/40/Demon_Slayer_Kimetsu_no_Yaiba_%E2%80%93_The_Hinokami_Chronicles_box_art.jpg",
+          "swiperImgs": [],
+          "releaseYear": 2019,
+          "episodes": 26,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 3,
+          "title": "Franksdagi sevgilim",
+          "catalog": [
+            "Romantika",
+            "Drama",
+            "Fantastika"
+          ],
+          "description": "Kelajakda insoniyat klaksosaur deb ataluvchi maxluqlarga qarshi kurashadi. Maxsus mecha robotlarni faqat juftlik bo‘lib boshqarish mumkin. Hiro ismli yigit o‘z o‘rnini topolmayotgan paytda sirli Zero Two bilan uchrashadi. Ularning munosabati oddiy jangdan ham kattaroq ma’noga ega bo‘lib, sevgi, fidoyilik va insoniylik haqida savollar tug‘diradi.",
+          "xulosa": "Sevgi va ishonch, shuningdek, mas’uliyatni anglash hayotni yanada boy qiladi.",
+          "img": "https://wallpapers.com/images/featured/darling-in-the-franxx-pictures-j468lgu4oedsxfla.jpg",
+          "bgImg": "https://m.media-amazon.com/images/I/81ecxwQEHLL._AC_UF894,1000_QL80_.jpg",
+          "swiperImgs": [],
+          "releaseYear": 2018,
+          "episodes": 24,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 4,
+          "title": "Tokyo qasoskorlari",
+          "catalog": [
+            "Jangari",
+            "Drama",
+            "Fantastika"
+          ],
+          "description": "Takemichi Hanagaki hayotida hech narsaga erishmagan oddiy yigit. U sobiq sevgilisi Hinata o‘ldirilganini biladi va tasodifan 12 yil ortga qaytadi. Endi u maktabdagi jinoyatchilar to‘dasiga kirib, kelajakni o‘zgartirishga harakat qiladi. Har bir qaror hayot va o‘lim o‘rtasidagi chiziqni belgilaydi.",
+          "xulosa": "Xatolardan saboq olish, jasorat va do‘stlik qadri hayotda eng muhim kuch ekanini ko‘rsatadi.",
+          "img": "https://img1.hotstarext.com/image/upload/f_auto/sources/r1/cms/prod/6867/1446867-i-17781cc97835",
+          "bgImg": "https://m.media-amazon.com/images/M/MV5BNGU3YzdhMWEtMGRkMC00MzY2LThkOGEtMDFmZDE0NGQxYzFjXkEyXkFqcGc@._V1_.jpg",
+          "swiperImgs": [],
+          "releaseYear": 2021,
+          "episodes": 24,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 5,
+          "title": "Seni oshqozon osti bezingni yemoqchiman",
+          "catalog": [
+            "Drama",
+            "Romantika"
+          ],
+          "description": "Yolg‘iz va odamlar bilan yaqinlashmaydigan o‘quvchi tasodifan sinfdoshi Sakuraning kundaligini topib oladi. U qizning og‘ir kasallikka chalinganini biladi. Ular birgalikda vaqt o‘tkazishni boshlashadi va hayot, o‘lim hamda insoniy munosabatlar haqida chuqur saboqlar olishadi.",
+          "xulosa": "Hayotni qadrlash, vaqt va do‘stlikning qadrini bilish hayotiy saboq beradi.",
+          "img": "https://i.ytimg.com/vi/U3iriAJlQfk/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAKG3mzuPMpwR0jiMmcvs4W_WLxDA",
+          "bgImg": "https://cover.hentaicdn.org/uploads/anime/13223/cover/734a3eca-d210-4eeb-8bd6-bba7224a53c1.jpg",
+          "swiperImgs": [],
+          "releaseYear": 2018,
+          "episodes": 1,
+          "duration": "1 soat 48 min",
+          "rating": 0
+        },
+        {
+          "id": 6,
+          "title": "Sening isming",
+          "catalog": [
+            "Romantika",
+            "Drama",
+            "Fantastika"
+          ],
+          "description": "Taki va Mitsuha sirli tarzda bir-birining tanasida uyg‘ona boshlaydi. Ular bir-birining hayotiga aralashib ketadi va vaqt o‘tishi bilan o‘zaro bog‘lanish kuchayadi. Ammo ular orasida vaqt va taqdir to‘siqlari borligini anglab yetishadi.",
+          "xulosa": "Sevgi, taqdir va insonlar orasidagi bog‘lanishning qadrini o‘rgatadi.",
+          "img": "https://beam-images.warnermediacdn.com/BEAM_LWM_DELIVERABLES/e95b27d7-7fba-4b3b-bed9-a134dd1bc6ba/2a56cb84-7c7e-11f0-a058-0afffffa4605?host=wbd-images.prod-vod.h264.io&partner=beamcom",
+          "bgImg": "https://m.media-amazon.com/images/S/pv-target-images/3b33b787082c712fa4a108355be493ebb42fcd4cd75ccfeb6ec3fae8d19ebf39.jpg",
+          "swiperImgs": [],
+          "releaseYear": 2016,
+          "episodes": 1,
+          "duration": "1 soat 46 min",
+          "rating": 0
+        },
+        {
+          "id": 7,
+          "title": "Re:Zero – Hayotni 0 dan boshlash",
+          "catalog": [
+            "Isekai",
+            "Drama",
+            "Fantastika",
+            "Psixologik"
+          ],
+          "description": "Subaru Natsuki boshqa dunyoga tushib qoladi va har safar o‘lganda vaqt boshiga qaytishini bilib oladi. U sevgan insonlarini himoya qilish uchun cheksiz azob va ruhiy bosimga bardosh beradi. Har bir o‘lim unga yangi saboq beradi.",
+          "xulosa": "Xatolardan saboq olish va ruhiy kuch insonni o‘zgartirishi mumkin.",
+          "img": "https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_1240/b_white/f_auto/q_auto/store/software/switch/70010000029072/0fac29aa9050a8d5d2fb8ab689b3c128c70a49d405bd99311c29324d4e956a25",
+          "bgImg": "https://sun9-23.userapi.com/s/v1/ig2/hbLqWc9YpQdywu8D_kW5ZK53Pi_6unlwAKG9kLJr-vDQJYyGQyBMzamTHVD1W0aqWAFK0SCGsXGBbOqF6Lqftj3z.jpg?quality=95&as=32x69,48x104,72x156,108x234,160x346,240x519,360x779,480x1039,540x1169,640x1385,720x1558,1080x2337,1183x2560&from=bu&cs=640x0",
+          "swiperImgs": [],
+          "releaseYear": 2016,
+          "episodes": 25,
+          "duration": "25 min",
+          "rating": 0
+        },
+        {
+          "id": 8,
+          "title": "Suzume – Eshiklarni quluflovchi kalit",
+          "catalog": [
+            "Romantika",
+            "Drama",
+            "Fantastika",
+            "Sarguzasht"
+          ],
+          "description": "Suzume tasodifan sirli eshiklarni topadi. Bu eshiklar boshqa o‘lchamlarga ochiladi va falokatlarni keltirib chiqaradi. U sirli yigit bilan birga butun Yaponiya bo‘ylab sayohat qilib, eshiklarni yopishga harakat qiladi.",
+          "xulosa": "Jasorat, mas’uliyat va o‘zini anglash orqali inson katta ishlarni amalga oshirishi mumkin.",
+          "img": "https://www.hollywoodreporter.com/wp-content/uploads/2023/01/202307156_1-H-2023.jpg?w=1296&h=730&crop=1",
+          "bgImg": "https://i0.wp.com/stewarthotston.com/wp-content/uploads/2024/10/images.jpeg?fit=452%2C678&ssl=1",
+          "swiperImgs": [],
+          "releaseYear": 2022,
+          "episodes": 1,
+          "duration": "1 soat 52 min",
+          "rating": 0
+        },
+        {
+          "id": 9,
+          "title": "Davolash sehridan foydalanishni noto‘g‘ri usuli",
+          "catalog": [
+            "Fantastika",
+            "Isekai",
+            "Jangari"
+          ],
+          "description": "Oddiy yigit boshqa dunyoga tushib qoladi va kuchli davolash sehriga ega ekanini bilib oladi. Ammo bu kuch uni og‘ir mashg‘ulotlar va xavfli janglar sari yetaklaydi. U nafaqat boshqalarni, balki o‘zini ham o‘zgartirishga majbur bo‘ladi.",
+          "xulosa": "Ilm va quvvatni to‘g‘ri ishlatish, mas’uliyat va aqlni oshirish hayotiy saboq beradi.",
+          "img": "https://i.ytimg.com/vi/bnxJycGtqdI/sddefault.jpg",
+          "bgImg": "https://i.ytimg.com/vi/nPBHV6hAlkY/maxresdefault.jpg",
+          "swiperImgs": [],
+          "releaseYear": 2023,
+          "episodes": 12,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 10,
+          "title": "Qalqon qahramoni",
+          "catalog": [
+            "Isekai",
+            "Fantastika",
+            "Sarguzasht",
+            "Drama"
+          ],
+          "description": "Naofumi boshqa dunyoga chaqiriladi va to‘rt qahramondan biri bo‘ladi. Ammo unga nisbatan tuhmat qilinadi va u jamiyatdan chetlatiladi. U yolg‘izlikda kuch to‘plab, o‘z sha’nini tiklash va dunyoni himoya qilish uchun kurashadi.",
+          "xulosa": "Sabr-toqat, strategiya va jasorat orqali qiyinchiliklarni yengish mumkin.",
+          "img": "https://telegra.ph/file/564c54c82ae9c5f2eb859.jpg",
+          "bgImg": "https://cdn.amediatv.uz/public/temp/4825534e0da13bebfa104d0cadb97f5e.jpg",
+          "swiperImgs": [],
+          "releaseYear": 2019,
+          "episodes": 25,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 11,
+          "title": "Omadsizning qayta tugilishi",
+          "catalog": [
+            "Isekai",
+            "Fantastika",
+            "Drama",
+            "Sarguzasht"
+          ],
+          "description": "Oldingi hayotida hech narsaga erisha olmagan yigit o‘limdan so‘ng sehrli dunyoda qayta tug‘iladi. U bu safar hayotini to‘g‘ri yashashga qaror qiladi. Kuchli sehr, murakkab munosabatlar va ichki o‘sish orqali u asta-sekin haqiqiy qahramonga aylanadi.",
+          "xulosa": "Xatolardan saboq olish, sabr-toqat va qat’iyat hayotni yaxshilashga yordam beradi.",
+          "img": "https://image.api.playstation.com/vulcan/ap/rnd/202406/1307/3ae6dd58b3f1a8015435b73a3da7864186bf83ddc97a1002.png",
+          "bgImg": "https://cdn1.bookmanager.com/i/m.php?b=5V9Txsj3eujI1sdudfEOtA&cb=1718769330",
+          "swiperImgs": [],
+          "releaseYear": 2023,
+          "episodes": 12,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 12,
+          "title": "Apreldagi yolg'on",
+          "catalog": [
+            "Drama",
+            "Muzika",
+            "Romantika"
+          ],
+          "description": "Kosei Arima - bolaligidan pianino chalishni o'rgangan va turli musobaqalarda qatnashgan mahoratli pianinochi. Uning ijrosi barchani hayratga solardi. Ammo onasi vafot etgach, Kosei pianino chalayotganda tovushlarni eshita olmay qoladi. Ikki yil o'tgach, u bahorda Kaori Miyazono ismli skripkachi qiz bilan tanishadi. Uning erkin va ijodiy uslubi Koseining hayotini butunlay o'zgartiradi.",
+          "xulosa": "Musiqa orqali qayta tug'ilish, sevgi va do'stlik insonni eng og'ir psixologik to'siqlardan olib chiqishi mumkin.",
+          "img": "https://i.pinimg.com/1200x/04/f7/c8/04f7c8f3e559fadd8290a9c68f8c1e6d.jpg",
+          "bgImg": "https://aniline.uz/uploads/posts/2017-09/1505164036_shigatsu_wa_kimi_no_uso.jpg",
+          "swiperImgs": [],
+          "releaseYear": 2014,
+          "episodes": 22,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 13,
+          "title": "Qirol o'yini",
+          "catalog": [
+            "Triller",
+            "Daxshat"
+          ],
+          "description": "Bir kuni sinf o'quvchilari'ning telefonlariga 'Qirol' nomidan xabarlar kela boshlaydi. Bu xabarlardagi buyruqlarni bajarmaganlar esa halok bo'ladi. O'quvchilar bu sirli o'yinning qurboniga aylanib, bir-birlariga ishonish va omon qolish uchun kurash olib boradilar.",
+          "xulosa": "Qiyin vaziyatlarda insonning asl mohiyati namoyon bo'ladi va birdamlik eng katta kuchdir.",
+          "img": "https://external-preview.redd.it/tc7ZXNAeaWV2ULtu75C76oiWv9t9u4vdQ99krn-MWhA.jpg?auto=webp&s=9be3adee9b26605f197570eac800f7305d0ce9b8",
+          "bgImg": "https://fr.web.img6.acsta.net/img/d8/dd/d8dd674fc551b841be8a2efa7433b9f3.jpg",
+          "swiperImgs": [],
+          "releaseYear": 2017,
+          "episodes": 12,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 14,
+          "title": "Men mavjud bo'lmagan shahar",
+          "catalog": [
+            "Detektiv",
+            "Psixologik"
+          ],
+          "description": "29 yoshli manga rassomi Satoru Fujinuma 'qayta tiklash' deb ataladigan maxsus qobiliyatga ega - u falokat yuz berishidan oldin vaqtni orqaga qaytarib, uni oldini oladi. Kunlardan bir kuni u onasining o'ldirilganini topadi va voqea uni 18 yil oldinga, boshlang'ich maktab davriga olib boradi. Endi u bolaligidagi sinfdoshining o'limining oldini olishi va onasining o'limiga sabab bo'lgan sirni ochishi kerak.",
+          "xulosa": "O'tmishdagi xatolarni tuzatish va boshqalar uchun javobgarlikni his qilish insonni haqiqiy qahramonga aylantiradi.",
+          "img": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2020/09/erased-1.jpg?w=1200&h=900&fit=crop",
+          "bgImg": "https://m.media-amazon.com/images/M/MV5BZWQ2YmI5NWMtZTY2Mi00MGUxLWFhMmEtYjVjZjMwOTNkOThjXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+          "swiperImgs": [],
+          "releaseYear": 2016,
+          "episodes": 12,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 15,
+          "title": "Meni oyga olib ket",
+          "catalog": [
+            "Romantika",
+            "Komediya"
+          ],
+          "description": "Nasa Yuzaki o'z ismi bilan bog'liq masxaralarga qaramay, akademik jihatdan a'lo darajada o'qiydi. Bir kuni u go'zal qiz Tsukasani ko'rib qoladi va unga bir qarashda oshiq bo'ladi. U unga o'z his-tuyg'ularini izhor qiladi, Tsukasa esa agar ular turmush qurishsa, u bilan uchrashishga rozi bo'ladi. Shunday qilib, ularning g'ayrioddiy oilaviy hayoti boshlanadi.",
+          "xulosa": "Haqiqiy sevgi soddalik va samimiylikda yashirin bo'lib, baxt uchun boylik yoki murakkablik kerak emas.",
+          "img": "https://i.ytimg.com/vi/_47HjK7QN4s/sddefault.jpg",
+          "bgImg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStiw9QqlOXI-GIJCxF2xXAvER8QC_9UQLhhQ&s",
+          "swiperImgs": [],
+          "releaseYear": 2020,
+          "episodes": 12,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 16,
+          "title": "Men yomon ko'rgan sinfdoshimga uylandim",
+          "catalog": [
+            "Romantika",
+            "Maktab"
+          ],
+          "description": "Saito va Akane bir-birlarini tilga olmaydigan sinfdoshlar edi. Bir kuni ularning bobolari ularni nikohlab qo'yishadi. Dastlab bir-birlariga nisbatan salbiy munosabatda bo'lishsa-da, bir tom ostida yashash ularni bir-birlarini yangicha ko'rishga majbur qiladi va asta-sekin ular o'rtasida haqiqiy his-tuyg'ular paydo bo'la boshlaydi.",
+          "xulosa": "Bir-birini tushunish va sabr-toqat eng kuchli dushmanlikni ham do'stlik va sevgiga aylantirishi mumkin.",
+          "img": "https://i.ytimg.com/vi/IBlPQkvctX0/maxresdefault.jpg ",
+          "bgImg": "https://cdn.amediatv.uz/public/temp/e251da013c9a0746f265d98bd5842f9a.jpg",
+          "swiperImgs": [],
+          "releaseYear": 2024,
+          "episodes": 12,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 17,
+          "title": "Sevgi deb atalgan shart",
+          "catalog": [
+            "Romantika",
+            "Hayotiy"
+          ],
+          "description": "Hotaru ma'lum sabablarga ko'ra sevgidan voz kechgan o'rta maktab o'quvchisi. Bir kuni u sinfidagi eng mashhur va sirli yigit Hananoi-kunning tashlab ketilganini ko'rib qoladi va unga o'z soyabonini beradi. Ertasi kuni Hananoi unga 'men sizning sevgilingiz bo'laman' deydi va ular o'rtasida g'ayrioddiy munosabatlar boshlanadi.",
+          "xulosa": "Sevgi insonni o'zgartirishi mumkin va haqiqiy his-tuyg'ular vaqt o'tishi bilan shakllanadi.",
+          "img": "https://www.romancemangarecs.com/wp-content/uploads/2023/07/A-Condition-Called-Love-cover.webp",
+          "bgImg": "https://images.booksense.com/images/676/772/9798888772676.jpg",
+          "swiperImgs": [],
+          "releaseYear": 2024,
+          "episodes": 12,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 18,
+          "title": "Xarobalar qirolligi",
+          "catalog": [
+            "Fantastika",
+            "Jangari"
+          ],
+          "description": "Uzoq kelajakda insoniyat va sun'iy intellekt o'rtasidagi urushdan so'ng, dunyo vayron bo'lgan. Adonis ismli yosh yigit butun insoniyatdan qasos olishni maqsad qilgan. U o'zining maxsus kuchlari va aql-zakovati bilan yangi dunyo tartibini yaratishga harakat qiladi. Ammo bu yo'lda u kutilmagan to'siqlarga duch keladi.",
+          "xulosa": "Nafrat va qasos insonni tubanlikka olib boradi, kechirim va tushunish esa haqiqiy kuchdir.",
+          "img": "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/c3b18d0657c5c03af20343685b7995c0.jpg",
+          "bgImg": "https://preview.redd.it/is-the-kingdom-of-ruins-manga-still-ongoing-and-is-there-v0-9uekj2rxlh7f1.jpg?width=640&crop=smart&auto=webp&s=01d4e9f475c1e7a99c18ff41c3ee8f95ab77460e",
+          "swiperImgs": [],
+          "releaseYear": 2023,
+          "episodes": 12,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 19,
+          "title": "Violet Evergarden",
+          "catalog": [
+            "Drama",
+            "Hayotiy"
+          ],
+          "description": "Violet Evergarden - urush paytida askar sifatida xizmat qilgan va endi avtomatik xotira qo'g'irchog'i bo'lib ishlaydigan qiz. U odamlarning his-tuyg'ularini so'zlarga aylantirib, ularga xat yozishda yordam beradi. O'zi esa urush paytida yo'qolgan odamining so'nggi so'zlari - 'men seni sevaman' degan iboraning ma'nosini tushunishga harakat qiladi. Har bir mijoz bilan ishlash unga insoniy his-tuyg'ularni tushunishga yordam beradi.",
+          "xulosa": "Sevgi va his-tuyg'ular insoniyatning eng murakkab, lekin eng go'zal tomoni bo'lib, ularni tushunish orqali o'zimizni anglaymiz.",
+          "img": "https://www.overlyanimated.com/wp-content/uploads/2018/06/IHy0vFZ.png",
+          "bgImg": "https://meltyrice.art/cdn/shop/products/violet.jpg?v=1660618917",
+          "swiperImgs": [],
+          "releaseYear": 2018,
+          "episodes": 13,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 20,
+          "title": "Alya ba'zan men bilan rus tilida noz-karashma qiladi",
+          "catalog": [
+            "Romantika",
+            "Maktab"
+          ],
+          "description": "Alya - yarim rus, yarim yapon qizi, maktabning eng mashhur va chiroyli o'quvchilaridan biri. U ba'zida sinfdoshi Masachikaga rus tilida gapirib, uning munosabatini kuzatishni yaxshi ko'radi. Ammo Masachika rus tilini juda yaxshi tushunadi, lekin buni bildirmaydi. Shu tariqa ular o'rtasida kulgili va romantik munosabatlar boshlanadi.",
+          "xulosa": "Haqiqiy his-tuyg'ular til to'siqlaridan kuchliroq va samimiylik har qanday sirni ochishga yordam beradi.",
+          "img": "https://i.ytimg.com/vi/MBM7qyH-YDY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDlmYImH9fzvEA5sUcM5W9TsmeXRw",
+          "bgImg": "https://a.storyblok.com/f/178900/1447x2047/f06550e8a5/lya-sometimes-hides-her-feelings-in-russian-season-2-announcement-momoco.jpg/m/filters:quality(95)format(webp)",
+          "swiperImgs": [],
+          "releaseYear": 2024,
+          "episodes": 12,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 21,
+          "title": "Frieren: So'nggi manzilga kuzatuvchi",
+          "catalog": [
+            "Sarguzasht",
+            "Drama"
+          ],
+          "description": "Frieren - uzoq umr ko'radigan elf qahramon. U o'n yillik sarguzashtdan so'ng, do'stlari bilan xayrlashadi. Ammo vaqt o'tishi bilan uning inson do'stlari qarib, vafot etadi. Frieren esa ular bilan o'tkazgan vaqtining qadriga yetmaganini tushunadi. Endi u o'tmishdagi do'stlarini tushunish va inson hayotining ma'nosini anglash uchun uzoq safarga otlanadi.",
+          "xulosa": "Vaqtning qadri, do'stlik va insoniy munosabatlarning ahamiyati - hayotning asl ma'nosi.",
+          "img": "https://m.media-amazon.com/images/S/pv-target-images/b054f79f938837f13e1be59cb3d0cf4afcc4f4923ceae6fc192837b03fa726eb.jpg",
+          "bgImg": "https://m.media-amazon.com/images/M/MV5BYjNmZWFkMTQtODhmYi00Mjg2LWEzZGUtYzg0N2IwNTM4MDY4XkEyXkFqcGc@._V1_.jpg",
+          "swiperImgs": [],
+          "releaseYear": 2023,
+          "episodes": 28,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 22,
+          "title": "Odamlar va jinlar solnomasi",
+          "catalog": [
+            "Jangari",
+            "Fantastika"
+          ],
+          "description": "Qadim zamonlarda odamlar va jinlar o'rtasida abadiy urush bo'lgan. Bir kuni oddiy dehqon yigiti tasodifan jinni qutqarib qoladi va u bilan do'stlashadi. Ammo ularning do'stligi ikki dunyo o'rtasidagi muvozanatni o'zgartirishi mumkin. Ular birgalikda tinchlik o'rnatish uchun kurash olib boradilar.",
+          "xulosa": "Turli xil bo'lishiga qaramay, tushunish va hamkorlik orqali eng katta to'siqlarni yengish mumkin.",
+          "img": "https://www.anitrendz.com/_next/image?url=https%3A%2F%2Fi0.wp.com%2Fanitrendz.net%2Fnews%2Fwp-content%2Fuploads%2F2025%2F03%2Fsword-of-the-demon-hunter-new-key-visual-e1743439258707.jpg%3Ffit%3D1413%252C796%26ssl%3D1&w=1920&q=75",
+          "bgImg": "https://m.media-amazon.com/images/I/91B2sk-ELuL._UF1000,1000_QL80_.jpg",
+          "swiperImgs": [],
+          "releaseYear": 2021,
+          "episodes": 12,
+          "duration": "20 min",
+          "rating": 0
+        },
+        {
+          "id": 23,
+          "title": "Vanitas",
+          "catalog": [
+            "Vampir",
+            "Sirli"
+          ],
+          "description": "19-asr Parijida vampirlar va odamlar birga yashaydi. Vanitas ismli yosh shifokor vampirlarni davolaydigan maxsus kitobga ega. U Noe ismli vampir bilan birga turli sirli voqealarni tekshiradi. Ammo Vanitasning o'tmishi va kitobning asl maqsadi ularni kutilmagan sirlar sari yetaklaydi.",
+          "xulosa": "Har bir inson o'zining ichki zulmati bilan kurashadi va haqiqiy kuch bu kurashda yordam so'rashdadir.",
+          "img": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2021/08/The-case-study-of-vanitas-header-love.png",
+          "bgImg": "https://i.pinimg.com/736x/28/b3/84/28b384a1272039b9e592a921dad9a3d1.jpg",
+          "swiperImgs": [],
+          "releaseYear": 2021,
+          "episodes": 24,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 24,
+          "title": "Besh kelin",
+          "catalog": [
+            "Romantika",
+            "Harem"
+          ],
+          "description": "Fuutarou - kambag'al, ammo aqlli o'rta maktab o'quvchisi. U besh egizak opa-singilga repetitorlik qilish uchun yollanadi. Bu besh qizning har biri turli xarakterga ega va dastlab o'qishga qiziqmaydi. Fuutarou ularni o'qitish va bitiruvga tayyorlash uchun turli usullarni qo'llaydi. Shu jarayonda ular o'rtasida murakkab munosabatlar rivojlanadi.",
+          "xulosa": "Sabr-toqat va tushunish orqali har qanday qiyinchilikni yengish va boshqalarning qalbiga yo'l topish mumkin.",
+          "img": "https://images5.alphacoders.com/120/1205666.jpg",
+          "bgImg": "https://cdn.amediatv.uz/public/temp/0cc815292de79565bde3acc807921e4a.jpg",
+          "swiperImgs": [],
+          "releaseYear": 2019,
+          "episodes": 24,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 25,
+          "title": "Tugatilgandan keyingi hayot",
+          "catalog": [
+            "Drama",
+            "Fantastika"
+          ],
+          "description": "Qahramon iblisni yengadi va tinchlik o'rnatiladi. Ammo iblisning so'nggi so'zlari: 'Men qaytaman' bo'ladi. Yillar o'tadi, qahramonlar qarib, dunyo o'zgaradi. Iblis qaytib kelganda, uni faqat bir qancha yosh jangchilar va eski qahramonlarning vorislari kutib oladi. Ular yangi urushga tayyormi?",
+          "xulosa": "Urush tugagach, eng qiyin kurash - tinchlikni saqlash va kelajak avlodga dunyoni asrab qoldirishdir.",
+          "img": "https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=1200,height=675/catalog/crunchyroll/f8ecbbef863396cafb153596ce129031.jpg",
+          "bgImg": "https://preview.redd.it/the-beginning-after-the-end-season-2-new-visual-v0-m5swhbzr94uf1.jpeg?auto=webp&s=c182eec088517593c91b65c0ed4419213a2733aa",
+          "swiperImgs": [],
+          "releaseYear": 2023,
+          "episodes": 28,
+          "duration": "24 min",
+          "rating": 0
+        },
+        {
+          "id": 26,
+          "title": "Qo'shni farishtani erkalatib qo'ydim",
+          "catalog": [
+            "Romantika",
+            "Hayotiy"
+          ],
+          "description": "Amane - oddiy o'rta maktab o'quvchisi. Uning qo'shnisida Mahiru ismli qiz yashaydi, uni hamma 'farishta' deb ataydi - u chiroyli, aqlli va hamma narsada mukammal. Bir kuni Amane yomg'ir ostida o'tirgan Mahiruga o'z soyabonini beradi. Shu kichik yaxshilikdan so'ng, ular o'rtasida kutilmagan munosabat boshlanadi va Mahiru Amanening uyiga tez-tez kela boshlaydi.",
+          "xulosa": "Haqiqiy baxt oddiy narsalarda va kichik yaxshiliklarda yashiringan.",
+          "img": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/01/mahiru-in-the-angel-next-door-spoils-me-rotten.jpg",
+          "bgImg": "https://m.media-amazon.com/images/M/MV5BNDI1OWVjNGYtZmE0NC00Zjk3LWI5ZWItODYxYWU2ZGQ1OTJmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+          "swiperImgs": [],
+          "releaseYear": 2023,
+          "episodes": 12,
+          "duration": "24 min",
+          "rating": 0
+        }
+      ],
+      "catalogs": [
+        {
+          "id": 1,
+          "title": "Jangari",
+          "description": "Kurash, jang va sarguzashtga to‘la animelar",
+          "img": "https://wallpapers.com/images/hd/action-anime-1gwafa8zya1v1tsz.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Romantika",
+          "description": "Sevgi va munosabatlar haqida animelar",
+          "img": "https://t3.ftcdn.net/jpg/08/32/80/46/360_F_832804688_vH1TeJJgiNF1aHeJVC1e5dMi5EWsZDQE.jpg"
+        },
+        {
+          "id": 3,
+          "title": "Fantastika",
+          "description": "Mo‘’jizaviy va fantastik dunyolar",
+          "img": "https://c4.wallpaperflare.com/wallpaper/983/422/352/fantasy-art-sunset-digital-art-magic-wallpaper-preview.jpg"
+        },
+        {
+          "id": 4,
+          "title": "Komedya",
+          "description": "Kulgi va yengil hazil bilan to‘la animelar",
+          "img": "https://img.freepik.com/free-photo/anime-style-group-boys-spending-time-together-enjoying-their-friendship_23-2151479332.jpg"
+        },
+        {
+          "id": 5,
+          "title": "Drama",
+          "description": "Hayotiy voqealar va his-tuyg‘ular bilan to‘la animelar",
+          "img": "https://static0.cbrimages.com/wordpress/wp-content/uploads/2022/08/kimi-no-na-wa-your-lie-in-april-i-want-to-eat-your-pancreas.jpg"
+        },
+        {
+          "id": 6,
+          "title": "Superqahramon",
+          "description": "Qahramonlar va ularning sarguzashtlari",
+          "img": "https://img2.akspic.ru/previews/7/6/8/1/7/171867/171867-anime-goku-Super_Saiyan-sayan-zamasu-x750.jpg"
+        },
+        {
+          "id": 7,
+          "title": "Psixologik",
+          "description": "Inson ruhiyati, ong va his-tuyg‘ular haqida animelar",
+          "img": "https://images.augustman.com/wp-content/uploads/sites/2/2023/10/31212004/death-note-1-1024x576-1.jpeg"
+        },
+        {
+          "id": 8,
+          "title": "Misteriya",
+          "description": "Sarguzasht va sirli voqealarga to‘la animelar",
+          "img": "https://i.pinimg.com/736x/e8/05/cd/e805cd35ceb933199c60e200396e3a65.jpg"
+        },
+        {
+          "id": 9,
+          "title": "Sport",
+          "description": "Sport va raqobatga oid animelar",
+          "img": "https://cdn.oneesports.gg/cdn-data/2024/04/Anime_BlueLockProjectWorldChampion_MainKeyArt_2-1024x576.jpg"
+        },
+        {
+          "id": 10,
+          "title": "Musical / Musiqa",
+          "description": "Musiqa va sahna san’ati bilan bog‘liq animelar",
+          "img": "https://img.freepik.com/premium-photo/girl-with-bl…hair-is-looking-up-water_916191-249353.jpg?w=1480"
+        },
+        {
+          "id": 11,
+          "title": "Isekai",
+          "description": "Bosh qahramon boshqa dunyoga yoki virtual olamga tushadigan animelar",
+          "img": "https://i.pinimg.com/1200x/5c/c9/08/5cc90890ce017f1e62337b5fb7bb3126.jpg"
+        }
+      ]
+    }
+  ]
+}
