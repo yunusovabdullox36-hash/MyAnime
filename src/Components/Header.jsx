@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
-const Navbar = ({ theme, onToggleTheme }) => {
+const Navbar = ({ theme, onToggleTheme, language, onChangeLanguage, t }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -14,25 +14,37 @@ const Navbar = ({ theme, onToggleTheme }) => {
 
         <nav className={`nav-links ${isOpen ? "open" : ""}`}>
           <NavLink to="/" className="nav-link" onClick={() => setIsOpen(false)}>
-            Bosh sahifa
+            {t.nav.home}
           </NavLink>
           <a href="#catalogs" className="nav-link" onClick={() => setIsOpen(false)}>
-            Janrlar
+            {t.nav.genres}
           </a>
           <a href="#anime-grid" className="nav-link" onClick={() => setIsOpen(false)}>
-            Anime ro'yxati
+            {t.nav.animeList}
           </a>
         </nav>
 
         <div className="nav-actions">
+          <div className="lang-switch" role="group" aria-label="Language switcher">
+            {["uz", "ru", "en"].map((lang) => (
+              <button
+                key={lang}
+                type="button"
+                className={`lang-btn ${language === lang ? "active" : ""}`}
+                onClick={() => onChangeLanguage(lang)}
+              >
+                {lang.toUpperCase()}
+              </button>
+            ))}
+          </div>
           <button className="theme-toggle" onClick={onToggleTheme} type="button">
-            {theme === "dark" ? "Light" : "Dark"}
+            {theme === "dark" ? t.common.light : t.common.dark}
           </button>
           <button
             className="menu-button"
             onClick={() => setIsOpen((prev) => !prev)}
             type="button"
-            aria-label="Menu"
+            aria-label={t.nav.menuAria}
           >
             <span />
             <span />

@@ -1,17 +1,18 @@
 import React, { useEffect, useMemo, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 
 const Home = () => {
+  const { t } = useOutletContext();
   const [catalogs, setCatalogs] = useState([]);
   const [animes, setAnimes] = useState([]);
-  const [activeCatalog, setActiveCatalog] = useState("Barchasi");
+  const [activeCatalog, setActiveCatalog] = useState(t.common.all);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  const [error, setError] = useState(false);
   const [previewAnime, setPreviewAnime] = useState(null);
   const [previewPosition, setPreviewPosition] = useState({ top: 0, left: 0 });
   const hoverTimerRef = useRef(null);
@@ -19,13 +20,13 @@ const Home = () => {
   const fetchData = async () => {
     try {
       const req = await fetch("/db.json");
-      if (!req.ok) throw new Error("Ma'lumot yuklanmadi.");
+      if (!req.ok) throw new Error("fetch-error");
       const res = await req.json();
       setCatalogs(res?.animes?.[0]?.catalogs ?? []);
       setAnimes(res?.animes?.[0]?.animeList ?? []);
-      setError("");
+      setError(false);
     } catch {
-      setError("Serverdan ma'lumot olishda xatolik bo'ldi.");
+      setError(true);
     } finally {
       setLoading(false);
     }
@@ -34,6 +35,10 @@ const Home = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
+  useEffect(() => {
+    setActiveCatalog(t.common.all);
+  }, [t]);
 
   useEffect(() => {
     return () => {
@@ -46,13 +51,13 @@ const Home = () => {
   const filteredAnimes = useMemo(() => {
     return animes.filter((anime) => {
       const byCatalog =
-        activeCatalog === "Barchasi" || anime.catalog?.includes(activeCatalog);
+        activeCatalog === t.common.all || anime.catalog?.includes(activeCatalog);
       const bySearch =
         anime.title?.toLowerCase().includes(search.toLowerCase()) ||
         anime.description?.toLowerCase().includes(search.toLowerCase());
       return byCatalog && bySearch;
     });
-  }, [animes, activeCatalog, search]);
+  }, [animes, activeCatalog, search, t]);
 
   const handleCardEnter = (anime, event) => {
     if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
@@ -86,22 +91,19 @@ const Home = () => {
           <img src={featuredAnime?.bgImg || featuredAnime?.img} alt="Hero background" />
         ) : null}
         <div className="container hero-content">
-          <p className="hero-badge">Premium Anime Collection</p>
-          <h1>Anime olamiga yangi dizaynda sho'ng'ing</h1>
-          <p>
-            Zamonaviy, tezkor va moslashuvchan platformada eng trend animelarni tomosha
-            qilish uchun tanlang.
-          </p>
+          <p className="hero-badge">{t.home.heroBadge}</p>
+          <h1>{t.home.heroTitle}</h1>
+          <p>{t.home.heroText}</p>
           <a className="primary-btn" href="#anime-grid">
-            Anime ko'rish
+            {t.home.heroButton}
           </a>
         </div>
       </section>
 
       <section id="catalogs" className="container section-block reveal-up">
         <div className="section-head">
-          <h2>Janrlar</h2>
-          <p>Qiziqishingizga mos janrni tanlang.</p>
+          <h2>{t.home.genresTitle}</h2>
+          <p>{t.home.genresText}</p>
         </div>
         <Swiper
           slidesPerView={1}
@@ -129,25 +131,25 @@ const Home = () => {
 
       <section className="container section-block reveal-up">
         <div className="section-head">
-          <h2>Anime qidiruvi</h2>
-          <p>Nomi yoki tavsif bo'yicha tez toping.</p>
+          <h2>{t.home.searchTitle}</h2>
+          <p>{t.home.searchText}</p>
         </div>
 
         <div className="controls">
           <input
             className="search-input"
             type="text"
-            placeholder="Masalan: Titan, Demon, Your Name..."
+            placeholder={t.home.searchPlaceholder}
             value={search}
             onChange={(event) => setSearch(event.target.value)}
           />
           <div className="chips">
             <button
               type="button"
-              className={`chip ${activeCatalog === "Barchasi" ? "active" : ""}`}
-              onClick={() => setActiveCatalog("Barchasi")}
+              className={`chip ${activeCatalog === t.common.all ? "active" : ""}`}
+              onClick={() => setActiveCatalog(t.common.all)}
             >
-              Barchasi
+              {t.common.all}
             </button>
             {catalogs.map((catalog) => (
               <button
@@ -165,14 +167,14 @@ const Home = () => {
 
       <section id="anime-grid" className="container section-block reveal-up">
         <div className="section-head">
-          <h2>Topilgan animelar</h2>
-          <p>{filteredAnimes.length} ta natija chiqdi.</p>
+          <h2>{t.home.resultTitle}</h2>
+          <p>{t.home.resultText(filteredAnimes.length)}</p>
         </div>
 
-        {error && <p className="empty-state">{error}</p>}
+        {error && <p className="empty-state">{t.common.fetchError}</p>}
 
         {loading ? (
-          <p className="empty-state">Yuklanmoqda...</p>
+          <p className="empty-state">{t.common.loading}</p>
         ) : !error ? (
           <div className="anime-grid">
             {filteredAnimes.map((anime) => (
@@ -201,7 +203,7 @@ const Home = () => {
         ) : null}
 
         {!loading && !error && filteredAnimes.length === 0 && (
-          <p className="empty-state">Bu filter bo'yicha anime topilmadi.</p>
+          <p className="empty-state">{t.home.emptyFilter}</p>
         )}
       </section>
 
@@ -220,7 +222,7 @@ const Home = () => {
             <p>{previewAnime.description}</p>
             <div className="hover-preview-meta">
               <span>{previewAnime.releaseYear}</span>
-              <span>{previewAnime.episodes} ep</span>
+              <span>{previewAnime.episodes} {t.common.episodesShort}</span>
               <span>{previewAnime.duration}</span>
             </div>
           </div>

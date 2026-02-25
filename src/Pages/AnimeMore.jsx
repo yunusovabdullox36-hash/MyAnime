@@ -1,22 +1,23 @@
 import React, { useCallback, useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { Link, useOutletContext, useParams } from "react-router-dom";
 
 const AnimeMore = () => {
+  const { t } = useOutletContext();
   const { id } = useParams();
   const [animeMore, setAnimeMore] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState("");
+  const [error, setError] = useState(false);
 
   const fetchAnime = useCallback(async () => {
     try {
       const req = await fetch("/db.json");
-      if (!req.ok) throw new Error("Ma'lumot yuklanmadi.");
+      if (!req.ok) throw new Error("fetch-error");
       const res = await req.json();
       const anime = res?.animes?.[0]?.animeList?.find((item) => item.id === Number(id));
       setAnimeMore(anime || null);
-      setError("");
+      setError(false);
     } catch {
-      setError("Serverdan ma'lumot olishda xatolik bo'ldi.");
+      setError(true);
       setAnimeMore(null);
     } finally {
       setLoading(false);
@@ -30,7 +31,7 @@ const AnimeMore = () => {
   if (loading) {
     return (
       <div className="container anime-detail-page">
-        <p className="empty-state">Yuklanmoqda...</p>
+        <p className="empty-state">{t.common.loading}</p>
       </div>
     );
   }
@@ -38,9 +39,9 @@ const AnimeMore = () => {
   if (!animeMore) {
     return (
       <div className="container anime-detail-page">
-        <p className="empty-state">{error || "Anime topilmadi."}</p>
+        <p className="empty-state">{error ? t.common.fetchError : t.common.notFound}</p>
         <Link to="/" className="primary-btn">
-          Bosh sahifaga qaytish
+          {t.common.backHome}
         </Link>
       </div>
     );
@@ -55,15 +56,15 @@ const AnimeMore = () => {
           <p>{animeMore.description}</p>
           <div className="meta-grid">
             <div>
-              <span>Chiqqan yili</span>
+              <span>{t.details.releaseYear}</span>
               <strong>{animeMore.releaseYear}</strong>
             </div>
             <div>
-              <span>Qismlar</span>
+              <span>{t.details.episodes}</span>
               <strong>{animeMore.episodes}</strong>
             </div>
             <div>
-              <span>Davomiyligi</span>
+              <span>{t.details.duration}</span>
               <strong>{animeMore.duration}</strong>
             </div>
           </div>
@@ -78,7 +79,7 @@ const AnimeMore = () => {
       </div>
 
       <article className="summary-box">
-        <h2>Xulosa</h2>
+        <h2>{t.common.detailsSummary}</h2>
         <p>{animeMore.xulosa}</p>
       </article>
     </section>
