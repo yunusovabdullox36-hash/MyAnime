@@ -185,7 +185,12 @@ const Home = () => {
                 onMouseEnter={(event) => handleCardEnter(anime, event)}
                 onMouseLeave={handleCardLeave}
               >
-                <div className="anime-poster" style={{ backgroundImage: `url(${anime.img})` }} />
+                <div className="anime-media">
+                  <div className="anime-poster" style={{ backgroundImage: `url(${anime.img})` }} />
+                  <div className="anime-media-overlay">
+                    <span className="media-pill">Poster</span>
+                  </div>
+                </div>
                 <div className="anime-info">
                   <h3>{anime.title}</h3>
                   <p>{anime.description?.slice(0, 110)}...</p>

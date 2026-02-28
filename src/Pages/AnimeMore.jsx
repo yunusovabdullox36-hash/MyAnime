@@ -1,6 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { Link, useOutletContext, useParams } from "react-router-dom";
 
+const FALLBACK_VIDEO_URL =
+  "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4";
+
 const AnimeMore = () => {
   const { t } = useOutletContext();
   const { id } = useParams();
@@ -47,6 +50,9 @@ const AnimeMore = () => {
     );
   }
 
+  const trailerVideo =
+    animeMore.video || animeMore.trailer || animeMore.previewVideo || FALLBACK_VIDEO_URL;
+
   return (
     <section className="container anime-detail-page reveal-up">
       <div className="detail-hero">
@@ -77,6 +83,18 @@ const AnimeMore = () => {
           </div>
         </div>
       </div>
+
+      <article className="detail-video-card">
+        <h2>{t.details?.watchPreview || "Video Preview"}</h2>
+        <video
+          className="detail-video"
+          src={trailerVideo}
+          poster={animeMore.bgImg || animeMore.img}
+          controls
+          playsInline
+          preload="metadata"
+        />
+      </article>
 
       <article className="summary-box">
         <h2>{t.common.detailsSummary}</h2>
