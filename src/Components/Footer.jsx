@@ -8,7 +8,7 @@ const Footer = ({ t }) => {
         <div>
           <Link className="brand footer-brand" to="/">
             <span className="brand-mark">A</span>
-            <span>Anime Atlas</span>
+            <span>{t.footer.brandName}</span>
           </Link>
           <p className="footer-text">{t.footer.about}</p>
         </div>
@@ -25,12 +25,12 @@ const Footer = ({ t }) => {
         </div>
         <div>
           <p className="footer-title">{t.footer.contact}</p>
-          <p className="footer-text">Email: animeatlas@site.uz</p>
-          <p className="footer-text">Telegram: @animeatlas</p>
+          <p className="footer-text">{t.footer.emailLabel}: animeatlas@site.uz</p>
+          <p className="footer-text">{t.footer.telegramLabel}: @animeatlas</p>
         </div>
       </div>
       <p className="copyright">
-        © {new Date().getFullYear()} Anime Atlas. {t.footer.rights}
+        (c) {new Date().getFullYear()} {t.footer.brandName}. {t.footer.rights}
       </p>
     </footer>
   );

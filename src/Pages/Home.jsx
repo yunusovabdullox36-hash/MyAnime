@@ -2,14 +2,19 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useOutletContext } from "react-router-dom";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { getLocalizedField } from "../utils/animeI18n";
+import { COMMENTS_UPDATED_EVENT, getAllComments } from "../utils/comments";
 import "swiper/css";
 import "swiper/css/pagination";
 
+const ALL_CATALOG = "__all__";
+
 const Home = () => {
-  const { t } = useOutletContext();
+  const { t, language } = useOutletContext();
   const [catalogs, setCatalogs] = useState([]);
   const [animes, setAnimes] = useState([]);
-  const [activeCatalog, setActiveCatalog] = useState(t.common.all);
+  const [commentsByAnime, setCommentsByAnime] = useState({});
+  const [activeCatalog, setActiveCatalog] = useState(ALL_CATALOG);
   const [search, setSearch] = useState("");
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
@@ -37,8 +42,16 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    setActiveCatalog(t.common.all);
-  }, [t]);
+    const syncComments = () => setCommentsByAnime(getAllComments());
+    syncComments();
+
+    window.addEventListener(COMMENTS_UPDATED_EVENT, syncComments);
+    window.addEventListener("focus", syncComments);
+    return () => {
+      window.removeEventListener(COMMENTS_UPDATED_EVENT, syncComments);
+      window.removeEventListener("focus", syncComments);
+    };
+  }, []);
 
   useEffect(() => {
     return () => {
@@ -51,13 +64,38 @@ const Home = () => {
   const filteredAnimes = useMemo(() => {
     return animes.filter((anime) => {
       const byCatalog =
-        activeCatalog === t.common.all || anime.catalog?.includes(activeCatalog);
+        activeCatalog === ALL_CATALOG || anime.catalog?.includes(activeCatalog);
+      const title = getLocalizedField(anime.title, language).toLowerCase();
+      const description = getLocalizedField(anime.description, language).toLowerCase();
       const bySearch =
-        anime.title?.toLowerCase().includes(search.toLowerCase()) ||
-        anime.description?.toLowerCase().includes(search.toLowerCase());
+        title.includes(search.toLowerCase()) ||
+        description.includes(search.toLowerCase());
       return byCatalog && bySearch;
     });
-  }, [animes, activeCatalog, search, t]);
+  }, [animes, activeCatalog, search, language]);
+
+  const translateGenre = (genre) => t.genres?.[genre] || genre;
+  const translateGenreDescription = (catalog) =>
+    t.genreDescriptions?.[catalog.title] || catalog.description;
+  const getCardDescription = (anime) => {
+    const raw = getLocalizedField(anime.description, language);
+    const hasLocalizedObject =
+      anime?.description &&
+      typeof anime.description === "object" &&
+      !Array.isArray(anime.description);
+
+    if (language === "uz" || hasLocalizedObject) return raw;
+
+    const genres = (anime.catalog || []).slice(0, 2).map(translateGenre).join(", ");
+    return t.home.cardAutoDescription({
+      year: anime.releaseYear || "-",
+      genres,
+    });
+  };
+  const getAnimeComments = (animeId) => {
+    const list = commentsByAnime[String(animeId)];
+    return Array.isArray(list) ? list : [];
+  };
 
   const handleCardEnter = (anime, event) => {
     if (hoverTimerRef.current) clearTimeout(hoverTimerRef.current);
@@ -88,7 +126,7 @@ const Home = () => {
       <section className="hero-section reveal-up">
         <div className="hero-overlay" />
         {featuredAnime?.bgImg || featuredAnime?.img ? (
-          <img src={featuredAnime?.bgImg || featuredAnime?.img} alt="Hero background" />
+          <img src={featuredAnime?.bgImg || featuredAnime?.img} alt={t.common.heroAlt} />
         ) : null}
         <div className="container hero-content">
           <p className="hero-badge">{t.home.heroBadge}</p>
@@ -121,8 +159,8 @@ const Home = () => {
                 className="catalog-card"
                 style={{ backgroundImage: `linear-gradient(160deg, rgba(0,0,0,.6), rgba(0,0,0,.2)), url(${catalog.img})` }}
               >
-                <h3>{catalog.title}</h3>
-                <p>{catalog.description}</p>
+                <h3>{translateGenre(catalog.title)}</h3>
+                <p>{translateGenreDescription(catalog)}</p>
               </article>
             </SwiperSlide>
           ))}
@@ -146,8 +184,8 @@ const Home = () => {
           <div className="chips">
             <button
               type="button"
-              className={`chip ${activeCatalog === t.common.all ? "active" : ""}`}
-              onClick={() => setActiveCatalog(t.common.all)}
+              className={`chip ${activeCatalog === ALL_CATALOG ? "active" : ""}`}
+              onClick={() => setActiveCatalog(ALL_CATALOG)}
             >
               {t.common.all}
             </button>
@@ -158,7 +196,7 @@ const Home = () => {
                 className={`chip ${activeCatalog === catalog.title ? "active" : ""}`}
                 onClick={() => setActiveCatalog(catalog.title)}
               >
-                {catalog.title}
+                {translateGenre(catalog.title)}
               </button>
             ))}
           </div>
@@ -188,18 +226,26 @@ const Home = () => {
                 <div className="anime-media">
                   <div className="anime-poster" style={{ backgroundImage: `url(${anime.img})` }} />
                   <div className="anime-media-overlay">
-                    <span className="media-pill">Poster</span>
+                    <span className="media-pill">{t.common.poster}</span>
                   </div>
                 </div>
                 <div className="anime-info">
-                  <h3>{anime.title}</h3>
-                  <p>{anime.description?.slice(0, 110)}...</p>
+                  <h3>{getLocalizedField(anime.title, language)}</h3>
+                  <p>{getCardDescription(anime)}</p>
                   <div className="tags">
                     {anime.catalog?.slice(0, 3).map((tag) => (
                       <span className="tag" key={tag}>
-                        {tag}
+                        {translateGenre(tag)}
                       </span>
                     ))}
+                  </div>
+                  <div className="card-comments">
+                    <strong>{t.comments.cardCount(getAnimeComments(anime.id).length)}</strong>
+                    <span>
+                      {getAnimeComments(anime.id)[0]?.text
+                        ? `${t.comments.latestOnCard}: ${getAnimeComments(anime.id)[0].text}`
+                        : t.comments.noComments}
+                    </span>
                   </div>
                 </div>
               </Link>
@@ -223,8 +269,8 @@ const Home = () => {
         >
           <div className="hover-preview-inner">
             <img src={previewAnime.img} alt={previewAnime.title} />
-            <h4>{previewAnime.title}</h4>
-            <p>{previewAnime.description}</p>
+            <h4>{getLocalizedField(previewAnime.title, language)}</h4>
+            <p>{getCardDescription(previewAnime)}</p>
             <div className="hover-preview-meta">
               <span>{previewAnime.releaseYear}</span>
               <span>{previewAnime.episodes} {t.common.episodesShort}</span>

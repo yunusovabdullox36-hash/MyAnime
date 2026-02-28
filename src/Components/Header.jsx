@@ -9,7 +9,7 @@ const Navbar = ({ theme, onToggleTheme, language, onChangeLanguage, t }) => {
       <div className="container nav-row">
         <Link className="brand" to="/">
           <span className="brand-mark">A</span>
-          <span>shuni</span>
+          <span>{t.footer.brandName}</span>
         </Link>
 
         <nav className={`nav-links ${isOpen ? "open" : ""}`}>
@@ -25,7 +25,7 @@ const Navbar = ({ theme, onToggleTheme, language, onChangeLanguage, t }) => {
         </nav>
 
         <div className="nav-actions">
-          <div className="lang-switch" role="group" aria-label="Language switcher">
+          <div className="lang-switch" role="group" aria-label={t.nav.languageSwitcher}>
             {["uz", "ru", "en"].map((lang) => (
               <button
                 key={lang}
